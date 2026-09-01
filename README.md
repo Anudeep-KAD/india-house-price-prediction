@@ -6,7 +6,7 @@ A machine learning based web application that predicts residential property pric
 
 The application is deployed using Streamlit Community Cloud.
 
-> Live link will be added after deployment.
+> 🔗 **Live App:** https://india-house-price-prediction-ahxcffhr28bfvnly84qjd7.streamlit.app/
 
 ## 📌 Project Overview
 
