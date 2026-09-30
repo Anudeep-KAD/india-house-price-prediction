@@ -1,0 +1,116 @@
+{
+  "BHK": {
+    "type": "numerical",
+    "statistic": 0.1936,
+    "p_value": 0.0,
+    "drifted": true
+  },
+  "Size_in_SqFt": {
+    "type": "numerical",
+    "statistic": 0.1645,
+    "p_value": 0.0,
+    "drifted": true
+  },
+  "Year_Built": {
+    "type": "numerical",
+    "statistic": 0.6819,
+    "p_value": 0.0,
+    "drifted": true
+  },
+  "Floor_No": {
+    "type": "numerical",
+    "statistic": 0.0063,
+    "p_value": 0.9927,
+    "drifted": false
+  },
+  "Total_Floors": {
+    "type": "numerical",
+    "statistic": 0.0076,
+    "p_value": 0.9516,
+    "drifted": false
+  },
+  "Age_of_Property": {
+    "type": "numerical",
+    "statistic": 0.6819,
+    "p_value": 0.0,
+    "drifted": true
+  },
+  "Nearby_Schools": {
+    "type": "numerical",
+    "statistic": 0.0084,
+    "p_value": 0.8997,
+    "drifted": false
+  },
+  "Nearby_Hospitals": {
+    "type": "numerical",
+    "statistic": 0.0163,
+    "p_value": 0.1788,
+    "drifted": false
+  },
+  "Public_Transport_Accessibility": {
+    "type": "numerical",
+    "statistic": 0.0149,
+    "p_value": 0.264,
+    "drifted": false
+  },
+  "Parking_Space": {
+    "type": "numerical",
+    "statistic": 0.0098,
+    "p_value": 0.7671,
+    "drifted": false
+  },
+  "Security": {
+    "type": "numerical",
+    "statistic": 0.0002,
+    "p_value": 1.0,
+    "drifted": false
+  },
+  "Amenities": {
+    "type": "numerical",
+    "statistic": 0.0132,
+    "p_value": 0.4053,
+    "drifted": false
+  },
+  "State": {
+    "type": "categorical",
+    "statistic": 7.3703,
+    "p_value": 0.5986,
+    "drifted": false
+  },
+  "City": {
+    "type": "categorical",
+    "statistic": 40.7033,
+    "p_value": 0.3953,
+    "drifted": false
+  },
+  "Property_Type": {
+    "type": "categorical",
+    "statistic": 7.8306,
+    "p_value": 0.098,
+    "drifted": false
+  },
+  "Furnished_Status": {
+    "type": "categorical",
+    "statistic": 1599.1459,
+    "p_value": 0.0,
+    "drifted": true
+  },
+  "Facing": {
+    "type": "categorical",
+    "statistic": 8.2608,
+    "p_value": 0.1424,
+    "drifted": false
+  },
+  "Owner_Type": {
+    "type": "categorical",
+    "statistic": 0.3901,
+    "p_value": 0.8228,
+    "drifted": false
+  },
+  "Availability_Status": {
+    "type": "categorical",
+    "statistic": 3.2694,
+    "p_value": 0.195,
+    "drifted": false
+  }
+}

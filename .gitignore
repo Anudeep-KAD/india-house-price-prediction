@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.pytest_cache/
+.mypy_cache/
+
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Large model files (use Git LFS or DVC in production)
+# models/*.pkl  # Uncomment if models are too large for git
+
+# Data (use DVC in production)
+# data/house_prices.csv  # Uncomment if dataset is too large
+
+# Secrets
+*.pem
+*.key
+secrets/
+
+# Docker
+.docker/
+
+# OS
+.DS_Store
+Thumbs.db

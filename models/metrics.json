@@ -1,0 +1,37 @@
+{
+  "mae": 6.7543,
+  "rmse": 9.8881,
+  "r2": 0.973,
+  "train_samples": 200000,
+  "test_samples": 50000,
+  "n_features": 82,
+  "training_time_sec": 48.22,
+  "python_version": "3.12.10",
+  "sklearn_version": "1.5.2",
+  "pandas_version": "2.2.3",
+  "model": "RandomForestRegressor",
+  "n_estimators": 100,
+  "numerical_features": [
+    "BHK",
+    "Size_in_SqFt",
+    "Year_Built",
+    "Floor_No",
+    "Total_Floors",
+    "Age_of_Property",
+    "Nearby_Schools",
+    "Nearby_Hospitals",
+    "Public_Transport_Accessibility",
+    "Parking_Space",
+    "Security",
+    "Amenities"
+  ],
+  "categorical_features": [
+    "State",
+    "City",
+    "Property_Type",
+    "Furnished_Status",
+    "Facing",
+    "Owner_Type",
+    "Availability_Status"
+  ]
+}

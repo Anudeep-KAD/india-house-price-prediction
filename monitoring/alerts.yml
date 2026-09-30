@@ -1,0 +1,55 @@
+groups:
+  - name: house_price_api_alerts
+    rules:
+
+      # Alert 1: API is down
+      # Threshold: no scrape data for 1 minute → API is completely unavailable
+      - alert: APIDown
+        expr: up{job="house-price-api"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "House Price API is down"
+          description: "The API has been unreachable for more than 1 minute. Immediate action required."
+
+      # Alert 2: High error rate
+      # Threshold: >5% of requests return 5xx errors over last 5 minutes
+      # Rationale: 5% is a reasonable SLO boundary; above this indicates a systemic problem
+      - alert: HighErrorRate
+        expr: |
+          (
+            sum(rate(http_requests_total{status_code=~"5.."}[5m]))
+            /
+            sum(rate(http_requests_total[5m]))
+          ) > 0.05
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High API error rate"
+          description: "More than 5% of requests are returning 5xx errors over the last 5 minutes."
+
+      # Alert 3: High latency
+      # Threshold: 95th percentile latency > 2 seconds for the /predict endpoint
+      # Rationale: ML inference should complete in <2s; above that degrades user experience
+      - alert: HighPredictionLatency
+        expr: |
+          histogram_quantile(0.95, rate(http_request_duration_seconds_bucket{endpoint="/predict"}[5m])) > 2.0
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High prediction endpoint latency"
+          description: "95th percentile latency for /predict is above 2 seconds for 5 minutes."
+
+      # Alert 4: Model not loaded
+      # Threshold: model_loaded gauge = 0 (model failed to load)
+      - alert: ModelNotLoaded
+        expr: model_loaded == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "ML model is not loaded"
+          description: "The prediction model is not loaded. All /predict calls will fail."
